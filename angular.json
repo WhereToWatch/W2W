@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "w2w": {
+    "W2WAPP": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/w2w",
+            "outputPath": "dist/W2WAPP",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,12 +24,14 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/swiper/css/swiper.min.css",
+              "./node_modules/bulma/css/bulma.min.css",
               "src/styles.css"
             ],
             "scripts": [
-              "../W2WAPP/node_modules/jquery/dist/jquery.min.js"
-            ]
-          },
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/swiper/js/swiper.min.js"
+            ]          },
           "configurations": {
             "production": {
               "fileReplacements": [
@@ -65,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "w2w:build"
+            "browserTarget": "W2WAPP:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "w2w:build:production"
+              "browserTarget": "W2WAPP:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "w2w:build"
+            "browserTarget": "W2WAPP:build"
           }
         },
         "test": {
@@ -113,21 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "w2w:serve"
+            "devServerTarget": "W2WAPP:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "w2w:serve:production"
+              "devServerTarget": "W2WAPP:serve:production"
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "w2w",
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "css"
-    }
-  }
+    }},
+  "defaultProject": "W2WAPP"
 }

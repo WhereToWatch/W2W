@@ -1,0 +1,101 @@
+<!--Beginn von Prime-->
+<div class="tile is-child">
+    <div class="columns box" style="background-color: #0f171e;">
+        <!--Beginn von Mobile Logo-->
+        <div class="column third is-hidden-desktop-monitor">
+            <div class="center-pic">
+                <img id="prime-logo" src="./assets/Prime_Video1.png"/>
+            </div>
+        </div>
+        <!--Ende von Mobile Logo Column-->
+        <div class="column">
+            <div id="flex-col" class="tabs is-centered is-boxed">
+                <ul>
+                    <li class="primetab is-active" (click)="openTab($event,'prime-cs','prime-tab','primetab')"><a>Coming Soon</a></li>
+                    <li class="primetab" (click)="openTab($event,'prime-leaving','prime-tab','primetab')"><a>Leaving Soon</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <!--Beginn von Coming Prime-->
+                <div id="prime-cs" class="prime-tab">
+                    <div class="home swiper-container">
+                        <div #SwiperWrapperCS class="home swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img class="border-picture" src="./assets/prime/cs/Carnival_Row.jpg" alt="Carnival_Row" style=" height: 100%; width: 100%;"/>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>Titel: Carnival_Row</h1>
+                                        <p>Movie</p> 
+                                        <p>Rating: 7</p>
+                                        <p>Watch: 
+                                            <a href="https://www.netflix.com/title/1580144">
+                                                <p>
+                                                    <fa-icon [icon]="faPlayCircle"></fa-icon>
+                                                </p>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Cold_Pursuit.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/walk_of_shame.jpg"/></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination down-slide swiper-pagination-white"></div>
+                        <!-- Add Arrows -->
+                        <div id="btnext-verti" class="swiper-button-next"></div>
+                        <div id="btprev-verti" class="swiper-button-prev"></div>
+                    </div>
+                    <!-- Initialize Swiper -->
+                </div>
+                <!--Ende von Comning Prime-->
+                <!--Beginn von Leaving Prime-->
+                <div id="prime-leaving" class="prime-tab" style="display: none;">
+                    <div class="home swiper-container">
+                        <div #SwiperWrapperLS class="home swiper-wrapper" >
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Carnival_Row.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Cold_Pursuit.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/walk_of_shame.jpg"/></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination down-slide swiper-pagination-white"></div>
+                        <!-- Add Arrows -->
+                        <div id="btnext-verti" class="swiper-button-next"></div>
+                        <div id="btprev-verti" class="swiper-button-prev"></div>
+                    </div>
+                    <!-- Initialize Swiper -->
+                </div>
+                <!--Ende von Leaving Prime-->
+            </div>
+            <!--Ende von Container-->
+        </div>
+        <!--Ende von Swiper Column-->
+        <!--Beginn von Desktop Prime Logo-->
+        <div class="column is-hidden-touch-fernseher is-hidden-touch-landscape">
+            <div class="center-pic">
+                <img id="prime-logo" src="./assets/Prime_Video1.png"/>
+            </div>
+        </div>
+        <!--Ende von Desktop Prime Logo Column-->
+    </div>
+    <!--Ende von Gapless column-->
+</div>
+<!--Ende von Prime-->

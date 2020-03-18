@@ -1,0 +1,21 @@
+*{
+    background-color: black;
+}
+.column{
+    padding: 0;
+}
+.tile.is-ancestor{
+    padding: 0;
+    margin: 0;
+}
+.tile.is-parent{
+    padding: 0;
+}
+
+/*Swiper*/
+.swiper-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+

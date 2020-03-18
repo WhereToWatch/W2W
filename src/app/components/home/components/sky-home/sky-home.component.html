@@ -1,0 +1,83 @@
+<!--Beginn von Sky-->
+<div class="tile is-child">
+    <div class="columns box" style="background-color: #10599E;">
+        <!--Beginn von Mobile Logo-->
+        <div class="column is-hidden-desktop-monitor">
+            <div class="center-pic">
+                <img id="sky-logo" src="./assets/skyq-nav.svg"/>
+            </div>
+        </div>
+        <!--Ende von Mobile Logo Column-->
+        <div class="column">
+            <div id="flex-col" class="tabs is-centered is-boxed">
+                <ul>
+                    <li class="skytab is-active" (click)="openTab($event,'sky-cs','sky-tab','skytab')"><a>Coming Soon</a></li>
+                    <li class="skytab" (click)="openTab($event,'sky-leaving','sky-tab','skytab')"><a>Leaving Soon</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <!--Beginn von Coming Sky-->
+                <div id="sky-cs" class="sky-tab">
+                    <div class="home swiper-container">
+                        <div #SwiperWrapperCS class="home swiper-wrapper">
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Carnival_Row.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Cold_Pursuit.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/walk_of_shame.jpg"/></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination down-slide swiper-pagination-white"></div>
+                        <!-- Add Arrows -->
+                        <div id="btnext-verti" class="swiper-button-next"></div>
+                        <div id="btprev-verti" class="swiper-button-prev"></div>
+                    </div>
+                    <!-- Initialize Swiper -->
+                </div>
+                <!--Ende von Coming Sky-->
+                <!--Beginn von Leaving Sky-->
+                <div id="sky-leaving" class="sky-tab" style="display: none;">
+                    <div class="home swiper-container">
+                        <div #SwiperWrapperLS class="home home swiper-wrapper" >
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Carnival_Row.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Cold_Pursuit.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/walk_of_shame.jpg"/></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination down-slide swiper-pagination-white"></div>
+                        <!-- Add Arrows -->
+                        <div id="btnext-verti" class="swiper-button-next"></div>
+                        <div id="btprev-verti" class="swiper-button-prev"></div>
+                    </div>
+                    <!-- Initialize Swiper -->
+                </div>
+                <!--Ende von Leaving Sky-->
+            </div>
+            <!--Ende vom Container-->
+        </div>
+        <!--Ende von Swiper Sky-->
+        <!--Beginn von Desktop Sky Logo-->
+        <div class="column is-hidden-touch-fernseher is-hidden-touch-landscape">
+            <div class="center-pic">
+                <img id="sky-logo" src="./assets\skyq-nav.svg"/>
+            </div>
+        </div>
+        <!--Ende von Desktop Sky Logo-->
+    </div>
+    <!--Ende von Gapless column-->
+</div>
+<!--Ende von Sky X-->

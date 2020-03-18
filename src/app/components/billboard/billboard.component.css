@@ -1,0 +1,67 @@
+/*Swiper-start*/
+#start-bt.swiper-button-prev, #start-bt.swiper-button-next
+{
+    opacity: 0;
+}
+#start.swiper-container:hover > .swiper-button-prev,
+#start.swiper-container:hover > .swiper-button-next
+{
+    opacity: 1;
+}
+@media screen and (min-width: 1280px)
+{
+    .swiper-container 
+    {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+    .swiper-wrapper
+    {
+        width: 1280px;
+    }
+    .swiper-container .swiper-slide 
+    {
+        width: 1280px;
+        height: 256px;
+        line-height: 256px;
+    }
+    .swiper-slide 
+    {
+        width: 1280px;
+        height: 250px;
+        line-height: 256px;
+    }
+    .swiper-slide img
+    {
+        width: 1280px;
+        height: 256px;
+        line-height: 256px;
+    }
+}
+
+/*Button hidden on mobile devices*/
+@media screen and (max-width: 1024px) 
+{
+    #start-bt.swiper-button-prev,#start-bt.swiper-button-next
+    {
+		display: none;
+    }
+    .swiper-slide
+    {
+        height: 150px;
+        width: 100%;
+    }
+    .swiper-slide img
+    {
+        height: 150px;
+        width: 100%;
+    }
+}
+/*Damit beim drücken der Buttons keine Umrandung angezeigt wird*/
+.swiper-button-prev:focus, 
+.swiper-button-next:focus
+{
+  outline-color: transparent;
+}

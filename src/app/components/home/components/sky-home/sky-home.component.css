@@ -1,0 +1,25 @@
+@import url("./css/mobile.css");
+@import url("./css/tablet.css");
+@import url("./css/desktop.css");
+@import url("./css/monitor.css");
+@import url("./css/Fernseher.css");
+.column{ 
+    padding: 0;
+}
+.tabs ul{
+    border: none;
+}
+ul{
+    margin-block-start: 0;
+}
+
+#sky-logo{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  width: 80%;
+  height: 60%;
+  max-width: 100%;
+}

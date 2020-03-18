@@ -1,0 +1,33 @@
+@media screen and (min-width: 2201px) and (orientation: landscape)
+{
+	.swiper-slide{
+    	width: auto;
+  	}
+	.columns{
+		margin: 20px;
+		margin-bottom: 0 !important;
+	}
+	/*Column*/
+	.box{
+		display:flex;
+	}
+	/*Tabs*/
+	#flex-col{
+		overflow: hidden;
+	}
+	/*Streaming-services Swiper*/
+	:root {
+	--swiper-navi-size: 20px;
+	--swiper-bullet-size: 20px;
+	}
+	.swiper-pagination.down-slide{
+		position: relative;
+		bottom: 0;
+		padding: 1% 0 0 0;
+	}
+	.swiper-pagination.down-slide .swiper-pagination-bullet{
+		height: var(--swiper-bullet-size);
+		width: var(--swiper-bullet-size);
+		background-color:grey;
+	}
+}

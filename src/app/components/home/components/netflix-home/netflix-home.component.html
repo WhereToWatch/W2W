@@ -1,0 +1,109 @@
+<!--Beginn von Netflix-->
+<div class="tile is-child">
+    <div class="columns box" style="background-color:  #141414;">
+        <!--Beginn von Netflix Logo-->
+        <div class="column third">
+            <div class="center-pic">
+                <img id="netflix-logo" img src="./assets/640px-Netflix_2015_logo.svg.png"/>
+            </div>
+        </div>
+        <!--Ende von Netflix Logo Column-->
+        <div class="column">
+            <div id="flex-col" class="tabs is-centered is-boxed">
+                <ul>
+                    <li class="netflixtab is-active" (click)="openTab($event,'netflix-cs','netflix-tab','netflixtab')"><a>Recently Released</a></li>
+                    <li class="netflixtab" (click)="openTab($event,'netflix-leaving','netflix-tab','netflixtab')"><a>Leaving Soon</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <!--Beginn von Coming Netflix-->
+                <div id="netflix-cs" class="netflix-tab">
+                    <div class="home swiper-container">
+                        <div #SwiperWrapperCS class="home swiper-wrapper">
+                            <ng-container *ngFor="let cs of dataValue.ITEMS">
+                                <div class="swiper-slide">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img class="border-picture" src="{{cs?.image}}" alt="{{cs?.title}}" style=" height: 100%; width: 100%;"/>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1>Title: <br>{{cs?.title}}</h1>
+                                            <p>Watch: 
+                                                <a href="https://www.netflix.com/title/{{cs?.netflixid}}">
+                                                    <p>
+                                                        <fa-icon [icon]="faPlayCircle"></fa-icon>
+                                                    </p>
+                                                </a>
+                                            </p>
+                                            <p>Type: {{cs?.type}}</p> 
+                                            <p>Rating: <br>{{cs?.rating}}</p>
+                                            <p>Added: <br>{{cs?.unogsdate}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-container>
+                            <!--<div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Carnival_Row.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Cold_Pursuit.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/walk_of_shame.jpg"/></div>-->
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination down-slide swiper-pagination-white"></div>
+                        <!-- Add Arrows -->
+                        <div id="btnext-verti" class="swiper-button-next"></div>
+                        <div id="btprev-verti" class="swiper-button-prev"></div>
+                    </div>
+                    <!-- Initialize Swiper -->
+                </div>
+                <!--Ende von Coming Netflix-->
+                <!--Beginn von Leaving Netflix-->
+                <div id="netflix-leaving" class="netflix-tab" style="display: none;">
+                    <div class="home swiper-container">
+                        <div #SwiperWrapperCS class="home swiper-wrapper">
+                            <ng-container *ngFor="let ls of expire.ITEMS">
+                                <div class="swiper-slide">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img class="border-picture" src="{{ls?.image}}" alt="{{ls?.title}}" style=" height: 100%; width: 100%;"/>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1>Title: <br>{{ls?.title}}</h1>
+                                            <p>Watch: 
+                                                <a href="https://www.netflix.com/title/{{ls?.netflixid}}">
+                                                    <p>
+                                                        <fa-icon [icon]="faPlayCircle"></fa-icon>
+                                                    </p>                                                
+                                                </a>
+                                            </p>
+                                            <p>Type: {{ls?.type}}</p>
+                                            <p>Rating: <br>{{ls?.rating}}</p>
+                                            <p>Added: <br>{{ls?.unogsdate}}</p>
+                                        </div>
+                                    </div>                                
+                                </div>
+                            </ng-container>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination down-slide swiper-pagination-white"></div>
+                        <!-- Add Arrows -->
+                        <div id="btnext-verti" class="swiper-button-next"></div>
+                        <div id="btprev-verti" class="swiper-button-prev"></div>
+                    </div>
+                    <!-- Initialize Swiper -->
+                </div>
+                <!--Ende von Leaving Netflix-->
+            </div>
+            <!--Ende vom Container-->
+        </div>
+        <!--Ende von Swiper Column-->
+    </div>
+    <!--Ende von Gapless column-->
+</div>
+<!--Ende von Netflix-->

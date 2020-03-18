@@ -1,0 +1,76 @@
+<!--Beginn von Disney+-->
+<div class="tile is-child">
+    <div class="columns box" style="background-color: #2C2E3B;">
+        <!--Beginn von Disney Logo-->
+        <div class="column third">
+            <div class="center-pic">
+                <img id="disney-logo" src="./assets/640px-Disney+_logo.svg.png"/>
+            </div>
+        </div>
+        <!--Ende von Disney Logo-->
+        <div class="column">
+            <div id="flex-col" class="tabs is-centered is-boxed">
+                <ul>
+                    <li class="disneytab is-active" (click)="openTab($event,'disney-cs','disney-tab','disneytab')"><a>Coming Soon</a></li>
+                    <li class="disneytab" (click)="openTab($event,'disney-leaving','disney-tab','disneytab')"><a>Leaving Soon</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <!--Beginn von Coming Disney-->
+                <div id="disney-cs" class="disney-tab">
+                    <div class="home swiper-container">
+                        <div #SwiperWrapperCS class="home swiper-wrapper">
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Carnival_Row.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Cold_Pursuit.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/walk_of_shame.jpg"/></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination down-slide swiper-pagination-white"></div>
+                        <!-- Add Arrows -->
+                        <div id="btnext-verti" class="swiper-button-next"></div>
+                        <div id="btprev-verti" class="swiper-button-prev"></div>
+                    </div>
+                    <!-- Initialize Swiper -->
+                </div>
+                <!--Ende von Coming Disney-->
+                <!--Beginn von Leaving Disney-->
+                <div id="disney-leaving" class="disney-tab" style="display: none;">
+                    <div class="home swiper-container">
+                        <div #SwiperWrapperLS class="home swiper-wrapper" >
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Carnival_Row.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/Cold_Pursuit.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/pacificrim2.jpg"/></div>
+                            <div class="swiper-slide"><img class="border-picture" src="./assets/prime/cs/walk_of_shame.jpg"/></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination down-slide swiper-pagination-white"></div>
+                        <!-- Add Arrows -->
+                        <div id="btnext-verti" class="swiper-button-next"></div>
+                        <div id="btprev-verti" class="swiper-button-prev"></div>
+                    </div>
+                    <!-- Initialize Swiper -->
+                </div>
+                <!--Ende von Leaving Disney-->
+            </div>
+            <!--Ende vom Container-->
+        </div>
+        <!--Ende von Swiper Column-->
+    </div>
+    <!--Ende von Gapless column-->
+</div>
+<!--Ende von Disney+-->

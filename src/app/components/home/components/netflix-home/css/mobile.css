@@ -1,0 +1,119 @@
+@media screen and (max-width: 500px) and (orientation: portrait)
+{
+	.swiper-wrapper{
+		height: auto;
+	}
+	.swiper-slide{
+		width: 44%;
+	}
+
+	/*Tabs*/
+	.columns{
+		margin: 20px;
+	}
+
+	/* Style the back side */
+	.flip-card-back {
+		background-color: black;
+		color: white;
+		/*transform: rotateY(180deg);*/
+	}
+    #flex-col{
+		margin-bottom: 1%;
+		overflow: hidden;
+	}
+
+	/*Services Swiper Buttons*/
+	#btprev-verti{
+		display: none;
+	}
+	#btnext-verti{
+		display: none;
+	}
+
+	/*Netflix*/
+  	.center-pic{
+		margin-top: 5%;
+		margin-bottom: 5%;
+  	}
+}
+
+@media screen and (min-width: 501px) and (max-width: 767px) and (orientation: portrait)
+{
+	.swiper-wrapper{
+		height: auto;
+	}
+	.swiper-slide{
+		width: 28%;
+	}
+
+	/*Tabs*/
+	.columns{
+		margin: 20px;
+	}
+
+	/* Style the back side */
+	.flip-card-back {
+		background-color: black;
+		color: white;
+		/*transform: rotateY(180deg);*/
+	}
+    #flex-col{
+		margin-bottom: 1%;
+		overflow: hidden;
+	}
+
+	/*Services Swiper Buttons*/
+	#btprev-verti{
+		display: none;
+	}
+	#btnext-verti{
+		display: none;
+	}
+
+	/*Netflix*/
+  	.center-pic{
+		margin-top: 5%;
+		margin-bottom: 5%;
+  	}
+}
+
+
+@media screen and (max-width: 767px) and (orientation: landscape)
+{
+	.swiper-slide{
+		width: 28%;
+	}
+	.swiper-wrapper{
+		height: auto;
+	}
+
+
+	/*Tabs*/
+	.columns{
+		margin: 20px;
+	}
+
+	/* Style the back side */
+	.flip-card-back {
+		background-color: black;
+		color: white;
+		/*transform: rotateY(180deg);*/
+	}
+	
+    #flex-col{
+		margin-bottom: 1%;
+	}
+
+
+	/*Services Swiper Buttons*/
+	#btprev-verti{
+		display: none;
+	}
+	#btnext-verti{
+		display: none;
+	}
+}
+
+
+
