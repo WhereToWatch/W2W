@@ -1,0 +1,39 @@
+#navback{
+    background-color: #686868;
+}
+#navblock2{
+    background-color: #888888;
+    float: left;
+    width: 100%;
+}
+section{
+
+    width:100%;
+}
+#navblock, .navbar-burger {
+    text-align: center;
+    background-color: #888888;
+    color: black;
+    font-weight: 900;
+}
+html{
+    background-color: #999999;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #999999;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+}
+
+.tile.box.is-parent{
+    background-color: #999999;
+}
+
+.navbar-burger{
+    top:1%!important;
+    right: 6%!important;
+    display: inline-block!important;
+    background-color: #999999;
+}  
