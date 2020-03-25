@@ -32,12 +32,10 @@ export class HeaderComponent implements OnInit {
   destroyBillboard(){
     /*this._ref.destroy();*/
   }   
-
-  ngOnInit() 
+  
+  changeNavbar()
   {
-    $(document).ready(function() 
-    {
-      if($(window).width() >= 1024 && $(window).width() < 2201)
+    if($(window).width() >= 1024 && $(window).width() < 2201)
       {
           $("#nav-moving").addClass(" is-fixed-top");
           $(window).scroll(function() 
@@ -63,44 +61,65 @@ export class HeaderComponent implements OnInit {
               }
               else
               {
-                document.getElementById("nav-moving").style.backgroundColor = "transparent";
+                document.getElementById("nav-moving").style.backgroundColor = "rgb(20, 20, 20)";
                 $("#nav-moving").removeClass(" is-fixed-top");
               }
           });
-      }      
-      // Check for click events on the navbar burger icon
-      $(".navbar-burger").click(function() 
-      {
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          $(".navbar-burger").toggleClass("is-active");
-          $(".navbar-menu").toggleClass("is-active");
+      } 
+  }
 
-      });
-      // Check for click events on the navbar burger icon
-      $(".has-dropdown1 .navbar-link").click(function() 
-      {
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          $(".has-dropdown1").toggleClass("is-active");
-      });
-      $(".removeclick").click(function() 
-      {
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          $(".has-dropdown1").removeClass("is-active");
-          $(".navbar-burger").removeClass("is-active");
-          $(".navbar-menu").removeClass("is-active");
-      });
-      $(".navbar-item.item").click(function() 
-      {
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          $(".has-dropdown1").removeClass("is-active");
-          $(".has-dropdown1").removeClass("is-hoverable");
-          $(".navbar-burger").removeClass("is-active");
-          $(".navbar-menu").removeClass("is-active");
-          setTimeout(function()
-          { 
-            $(".has-dropdown1").addClass("is-hoverable"); 
-          }, 500);
-      });
+  closeNavbarMenu()
+  {
+    $(".removeclick").click(function() 
+    {
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".has-dropdown1").removeClass("is-active");
+        $(".navbar-burger").removeClass("is-active");
+        $(".navbar-menu").removeClass("is-active");
+    });
+    $(".navbar-item.item").click(function() 
+    {
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".has-dropdown1").removeClass("is-active");
+        $(".has-dropdown1").removeClass("is-hoverable");
+        $(".navbar-burger").removeClass("is-active");
+        $(".navbar-menu").removeClass("is-active");
+        setTimeout(function()
+        { 
+          $(".has-dropdown1").addClass("is-hoverable"); 
+        }, 500);
+    });
+  }
+
+  toggleNavbarMenu()
+  {
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function() 
+    {
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+    });
+  }
+
+  toggleDropDown()
+  {
+    // Check for click events on the navbar burger icon
+    $(".has-dropdown1 .navbar-link").click(function() 
+    {
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".has-dropdown1").toggleClass("is-active");
+    });
+  }
+
+  ngOnInit() 
+  {
+    $(document).ready(function() 
+    {     
+      this.changeNavbar();
+      this.closeNavbarMenu();
+      this.toggleNavbarMenu();
+      this.toggleDropDown();
     })
   }
 }

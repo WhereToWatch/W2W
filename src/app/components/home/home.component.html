@@ -1,7 +1,7 @@
 <app-billboard></app-billboard>
-<div (window:resize)="initSwiperOnResize($event)" style="color: black;"><!--(window:resize)="initSwiperOnResize($event)"-->
+<div (window:resize)="initSwiperOnResize($event);" style="color: black;"><!--(window:resize)="initSwiperOnResize($event)"-->
     <div class="tile is-ancestor">
-        <div class="tile is-12 is-vertical is-parent" (window:resize)="changeContainerHeight($event)">
+        <div class="tile is-12 is-vertical is-parent">
             <app-netflix-home></app-netflix-home><!--(tab)="openTab($event)"-->
             <app-prime-home></app-prime-home>
             <app-disney-home></app-disney-home>

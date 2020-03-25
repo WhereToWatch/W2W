@@ -1,6 +1,6 @@
 html{
-    touch-action: none;
     background-color: black;
+    touch-action: none;
 }
 body{
     margin:0;

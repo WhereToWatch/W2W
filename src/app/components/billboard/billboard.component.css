@@ -8,7 +8,10 @@
 {
     opacity: 1;
 }
-@media screen and (min-width: 1280px)
+.swiper-container{
+    background-color: transparent;
+}
+@media screen and (min-width: 1600px)
 {
     .swiper-container 
     {
@@ -19,25 +22,24 @@
     }
     .swiper-wrapper
     {
-        width: 1280px;
+        width: 1600px;
     }
     .swiper-container .swiper-slide 
     {
-        width: 1280px;
-        height: 256px;
+        width: 1600px;
+        height: 320px;
         line-height: 256px;
     }
     .swiper-slide 
     {
-        width: 1280px;
-        height: 250px;
-        line-height: 256px;
+        width: 1600px;
+        height: 320px;
+        line-height: 320px;
     }
     .swiper-slide img
     {
-        width: 1280px;
-        height: 256px;
-        line-height: 256px;
+        width: 1600px;
+        height: 320px;
     }
 }
 
@@ -50,12 +52,12 @@
     }
     .swiper-slide
     {
-        height: 150px;
+        height: 100%;
         width: 100%;
     }
     .swiper-slide img
     {
-        height: 150px;
+        height: 100%;
         width: 100%;
     }
 }

@@ -50,12 +50,12 @@ export class NetflixHomeComponent implements OnInit {
   }*/
 
   constructor(private http: HttpClient, public element: ElementRef, private rd: Renderer2) {
-    this.getNew();
-    this.getLeaving();
+    /*this.getNew();
+    this.getLeaving();*/
   } 
   getNew() {
     this.http.get<any>("https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi?q=get%3Anew7%3ADE&p=1&t=ns&st=adv", { headers: headers }).
-    subscribe(csdata => { this.dataValue = csdata; console.log(this.dataValue); });
+    subscribe(csdata => { this.dataValue = csdata; /*console.log(this.dataValue);*/ });
   }
   getLeaving() {
     this.http.get<any>("https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi?q=get%3Aexp%3ADE&t=ns&st=adv&p=1", { headers: headers }).

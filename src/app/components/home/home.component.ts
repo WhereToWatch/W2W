@@ -168,8 +168,9 @@ export class HomeComponent implements OnInit, AfterViewInit{
         }
     }
     @HostListener('window:resize', ['$event'])
-    changeContainerHeight(event)
+    initSwiperOnResize(event)
     {
+        this.swiperInit();
         if($(window).width() >= 1024 && $(window).width() < 2201)
         {
 		    var swipercontainer = Array.from(document.getElementsByClassName("home swiper-container") as HTMLCollectionOf<HTMLElement>);
@@ -177,18 +178,13 @@ export class HomeComponent implements OnInit, AfterViewInit{
                 element.style.height = ""+ window.innerWidth * 0.2+"px";
             });
         }
-    }
-    initSwiperOnResize(event)
-    {
-        /*if (mySwiper != undefined) {  
-            mySwiper.destroy(true,true);
-            mySwiper = undefined;
-            $('.swiper-container').attr('style', '');
-            this.swiperInit();
+        if(window.matchMedia("(max-width: 1599px)").matches)
+        {
+            var billboardswipercontainer = Array.from(document.getElementsByClassName("billboard swiper-container") as HTMLCollectionOf<HTMLElement>);
+            billboardswipercontainer.forEach((element) => {
+                element.style.height = ""+window.innerWidth * 0.2+"px";
+            });
         }
-        else{
-            this.swiperInit();
-        }*/
     }
     ngAfterViewInit(){	
         if($(window).width() >= 1024 && $(window).width() < 2201)
@@ -199,6 +195,13 @@ export class HomeComponent implements OnInit, AfterViewInit{
                 element.style.height = ""+window.innerWidth * 0.2+"px";
             });
         } 
+        if(window.matchMedia("(max-width: 1599px)").matches)
+        {
+            var billboardswipercontainer = Array.from(document.getElementsByClassName("billboard swiper-container") as HTMLCollectionOf<HTMLElement>);
+            billboardswipercontainer.forEach((element) => {
+                element.style.height = ""+window.innerWidth * 0.2+"px";
+            });
+        }
     } 
 
     ngOnDestroy() {
