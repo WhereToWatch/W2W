@@ -24,8 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/swiper/css/swiper.min.css",
               "./node_modules/bulma/css/bulma.min.css",
+              "./node_modules/swiper/css/swiper.min.css",
               "src/styles.css"
             ],
             "scripts": [

@@ -83,7 +83,30 @@ img{
 .border-picture {
     border-radius: 5%;
 }
-
+.full-half-third{
+  width: 100%;
+}
+.full-half-2third{
+  width: 100%;
+}
+@media screen and (min-width: 1024px) and (max-width: 2200px) and (orientation: landscape)
+{
+  .full-half-third{
+    width: 50%;
+  }
+  .full-half-2third{
+    width: 50%;
+  }
+}
+@media screen and (min-width: 2201px)
+{
+  .full-half-third{
+    flex: 0 0 33%;
+  }
+  .full-half-2third{
+    flex: 0 0 67%;
+  }
+}
 /*Tablet and Phones*/
 @media screen and (max-width: 1024px)
 {

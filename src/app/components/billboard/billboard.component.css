@@ -1,4 +1,7 @@
 /*Swiper-start*/
+*{
+    color: white;
+}
 #start-bt.swiper-button-prev, #start-bt.swiper-button-next
 {
     opacity: 0;
@@ -8,8 +11,43 @@
 {
     opacity: 1;
 }
+.center-text{
+    padding: 1% 5%;
+}
 .swiper-container{
     background-color: transparent;
+}
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.swiper-slide .title {
+    position: relative;
+    font-size: 41px; 
+    font-weight: 300;
+}
+.swiper-slide .subtitle {
+    position: relative;
+    font-size: 21px;
+}
+.swiper-slide .text {
+    position: relative;
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.3;
+}
+@media screen and (min-width: 830x) and (max-width: 1023px)
+{
+    .center-text{
+        padding: 1% 5%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1600px)
+{
+    .center-text{
+        padding: 5% 7%;
+    }
 }
 @media screen and (min-width: 1600px)
 {
@@ -29,6 +67,9 @@
         width: 1600px;
         height: 320px;
         line-height: 256px;
+    }
+    .center-text{
+        padding: 5% 20%;
     }
     .swiper-slide 
     {
@@ -57,7 +98,6 @@
     }
     .swiper-slide img
     {
-        height: 100%;
         width: 100%;
     }
 }

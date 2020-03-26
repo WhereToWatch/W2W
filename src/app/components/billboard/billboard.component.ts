@@ -20,8 +20,16 @@ export class BillboardComponent implements OnInit {
         speed: 600,
         effect: 'fade',
         grabCursor: true,
-        simulateTouch:false,
+        parallax: true,
         loop:true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
         autoplay:{
             delay: 5000,
             disableOnInteraction: false,
@@ -36,6 +44,7 @@ export class BillboardComponent implements OnInit {
         autoHeight: true,
         simulateTouch:false,
         effect: 'fade',
+        parallax: true,
         loop:true,
         pagination: {
             el: '.swiper-pagination',
@@ -57,6 +66,7 @@ export class BillboardComponent implements OnInit {
         speed: 600,
         autoHeight: true,
         simulateTouch:false,
+        parallax: true,
         effect: 'fade',
         loop:true,
         pagination: {
@@ -81,6 +91,10 @@ export class BillboardComponent implements OnInit {
     {   
         this.swiperMobile();
     }
+    else if(window.matchMedia("(min-width: 1028px) and (max-width: 1599px) and (orientation: portrait)").matches)
+    {
+        this.swiperMobile();
+    }
     else if(window.matchMedia("(min-width: 1028px) and (max-width: 1599px) and (orientation: landscape)").matches)
     {
         this.swiperDesktop();
@@ -88,19 +102,23 @@ export class BillboardComponent implements OnInit {
     else if(window.matchMedia("(min-width: 1600px) and (orientation: landscape)").matches)
     {
         this.swiperTV();
-    };
+    }
+    else
+    {
+        this.swiperDesktop();
+    }
   }
-  
+
   ngOnInit() 
   {
     this.swiperInit(); 
-    if(window.matchMedia("(max-width: 1599px)").matches)
+    /*if(window.matchMedia("(max-width: 1599px)").matches)
     {
         var swipercontainer = Array.from(document.getElementsByClassName("billboard swiper-container") as HTMLCollectionOf<HTMLElement>);
         swipercontainer.forEach((element) => {
             element.style.height = ""+window.innerWidth * 0.2+"px";
         });
-    }
+    }*/
   }
 
 }

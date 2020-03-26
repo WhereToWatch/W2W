@@ -5,8 +5,6 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, Scrollbar,Autoplay,Parallax,EffectFade } from 'swiper/js/swiper.esm.js';
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
-var mySwiper;
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,12 +12,13 @@ var mySwiper;
 })
 export class HomeComponent implements OnInit, AfterViewInit{
 
+    mySwiper;
     faPlayCircle = faPlayCircle;
 
     constructor(private rd: Renderer2) { }
 
     mobileSwiper(){
-        mySwiper = new Swiper('.home.swiper-container',
+        this.mySwiper = new Swiper('.home.swiper-container',
         {
             /*breakpoints: {
                 320: {
@@ -35,7 +34,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
         });
     }
     tabletSwiper(){
-        mySwiper = new Swiper('.home.swiper-container',
+        this.mySwiper = new Swiper('.home.swiper-container',
         {
                 direction: 'horizontal',
                 slidesPerView: 'auto',
@@ -46,7 +45,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
         });
     }
     desktopMonitorSwiper(){
-        mySwiper = new Swiper('.home.swiper-container', {
+        this.mySwiper = new Swiper('.home.swiper-container', {
             direction: 'vertical',
             slidesPerView: 1,
             slidesPerColumn: 3,
@@ -66,7 +65,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
         });
     }
     tvSwiper(){
-        mySwiper = new Swiper('.home.swiper-container',
+        this.mySwiper = new Swiper('.home.swiper-container',
             {
                 direction: 'horizontal',
                 slidesPerView: 5,
@@ -94,7 +93,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
         {      
             this.mobileSwiper();
         }
-        else if (window.matchMedia("(max-width: 1439px) and (orientation: portrait)").matches) 
+        else if (window.matchMedia("(min-width: 1024px) and (max-width: 1439px) and (orientation: portrait)").matches) 
         {  
             this.tabletSwiper();
         }
@@ -108,70 +107,80 @@ export class HomeComponent implements OnInit, AfterViewInit{
         };
     }
 
-    ngOnInit() {
-        this.swiperInit();
-        var i;
-        if (window.matchMedia("(orientation: portrait)").matches)
+    portraitColumn()
+    {
+        let column = document.getElementsByClassName("column ");
+        let columnThird = document.getElementsByClassName("column third");
+
+        if (window.matchMedia("(max-width: 1439px)").matches)
         {
-            if($(window).width() < 1024){
-                var x = document.getElementsByClassName("column");
-                for (i = 0; i < x.length; i++)
-                {
-                    x[i].className = x[i].className.replace("column", "column is-full");
-                }
-            }
-            else if($(window).width() > 1023 && $(window).width() < 2201)
+            for (let i = 0; i < column.length; i++)
             {
-                var x = document.getElementsByClassName("column");
-                for (i = 0; i < x.length; i++)
-                {
-                    x[i].className = x[i].className.replace("column", "column is-half");
-                }
-            }
-            else if($(window).width() > 2200){
-                var s = document.getElementsByClassName("column third")
-                for (i = 0; i < s.length; i++) {
-                    s[i].className = s[i].className.replace(" third", " is-two-fifths ");
-                }
-                var x = document.getElementsByClassName("column ")
-                for (i = 0; i < x.length; i++) {
-                    x[i].className = x[i].className.replace(" ", "  is-two-fifths ");
-                }
+                column[i].className = column[i].className.replace("column", "column is-full");
             }
         }
-        if (window.matchMedia("(orientation: landscape)").matches)
+        else if(window.matchMedia("(min-width: 1440px) and (max-width: 2200px)").matches)
         {
-            if($(window).width() >= 1024 && $(window).width() < 2201){
-                var x = document.getElementsByClassName("column");
-                for (i = 0; i < x.length; i++)
-                {
-                    x[i].className = x[i].className.replace("column", "column is-half");
-                }
+            for (let i = 0; i < column.length; i++)
+            {
+                column[i].className = column[i].className.replace("column", "column is-half");
             }
-            else if($(window).width() <= 1023){
-                var x = document.getElementsByClassName("column");
-                for (i = 0; i < x.length; i++)
-                {
-                    x[i].className = x[i].className.replace("column", "column is-full");
-                }
+        }
+        else if(window.matchMedia("(min-width: 2201px)").matches)
+        {
+            for (let i = 0; i < columnThird.length; i++) {
+                columnThird[i].className = columnThird[i].className.replace(" third", " is-one-fifths ");
             }
-            else if($(window).width() > 2200){
-                var s = document.getElementsByClassName("column third")
-                for (i = 0; i < s.length; i++) {
-                    s[i].className = s[i].className.replace(" third", " is-two-fifths ");
-                }
-                var x = document.getElementsByClassName("column ")
-                for (i = 0; i < x.length; i++) {
-                    x[i].className = x[i].className.replace(" ", "  is-two-fifths ");
-                }
+            for (let i = 0; i < column.length; i++) {
+                column[i].className = column[i].className.replace(" ", "  is-two-fifths ");
             }
         }
     }
-    @HostListener('window:resize', ['$event'])
-    initSwiperOnResize(event)
+
+    landscapeColumn()
     {
-        this.swiperInit();
-        if($(window).width() >= 1024 && $(window).width() < 2201)
+        let column = document.getElementsByClassName("column ");
+        let columnThird = document.getElementsByClassName("column third");
+        let isFull = document.getElementsByClassName(" is-full");
+        let isHalf = document.getElementsByClassName(" is-half");
+        let isTwo = document.getElementsByClassName(" is-full");
+
+        if (window.matchMedia("(max-width: 1023px)").matches)
+        {
+            /*for (let i = 0; i < column.length; i++)
+            {
+                isHalf[i].className = isHalf[i].className.replace("is-half", "");
+            }*/
+            for (let i = 0; i < column.length; i++)
+            {
+                column[i].className = column[i].className.replace("column", "column is-full");
+            }
+        }
+        else if(window.matchMedia("(min-width: 1024px) and (max-width: 2200px)").matches)
+        {
+            /*for (let i = 0; i < column.length; i++)
+            {
+                isFull[i].className = isFull[i].className.replace("is-full", "");
+            }*/
+            for (let i = 0; i < column.length; i++)
+            {
+                column[i].className = column[i].className.replace("column", "column is-half");
+            }
+        }
+        else if(window.matchMedia("(min-width: 2201px)").matches)
+        {
+            for (let i = 0; i < columnThird.length; i++) {
+                columnThird[i].className = columnThird[i].className.replace(" third", " is-one-fifths ");
+            }
+            for (let i = 0; i < column.length; i++) {
+                column[i].className = column[i].className.replace(" ", "  is-two-fifths ");
+            }
+        }
+    }
+
+    setSwiperContainerHeight()
+    {
+        if(window.matchMedia("(min-width: 1024px) and (max-width: 2200px)").matches)
         {
 		    var swipercontainer = Array.from(document.getElementsByClassName("home swiper-container") as HTMLCollectionOf<HTMLElement>);
             swipercontainer.forEach((element) => {
@@ -186,24 +195,31 @@ export class HomeComponent implements OnInit, AfterViewInit{
             });
         }
     }
-    ngAfterViewInit(){	
-        if($(window).width() >= 1024 && $(window).width() < 2201)
-        {
-            var swipercontainer = Array.from(document.getElementsByClassName("home swiper-container") as HTMLCollectionOf<HTMLElement>);
-            swipercontainer.forEach((element) => {
 
-                element.style.height = ""+window.innerWidth * 0.2+"px";
-            });
-        } 
-        if(window.matchMedia("(max-width: 1599px)").matches)
+    ngOnInit() 
+    {
+        this.swiperInit();
+        /*if (window.matchMedia("(orientation: portrait)").matches)
         {
-            var billboardswipercontainer = Array.from(document.getElementsByClassName("billboard swiper-container") as HTMLCollectionOf<HTMLElement>);
-            billboardswipercontainer.forEach((element) => {
-                element.style.height = ""+window.innerWidth * 0.2+"px";
-            });
+            this.portraitColumn();
         }
-    } 
+        if (window.matchMedia("(orientation: landscape)").matches)
+        {
+            this.landscapeColumn();
+        }*/
+    }
 
+    @HostListener('window:resize', ['$event'])
+    initSwiperOnResize(event)
+    {
+        this.swiperInit();
+        this.setSwiperContainerHeight();
+    }
+    ngAfterViewInit(){	
+        this.setSwiperContainerHeight();
+        let swipercontainer = <HTMLElement>document.querySelector('.swiper-container');
+        swipercontainer.style.background ='black';
+    } 
     ngOnDestroy() {
     //this.resizeSubscription$.unsubscribe()
     }

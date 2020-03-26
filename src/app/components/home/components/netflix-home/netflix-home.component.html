@@ -2,13 +2,13 @@
 <div class="tile is-child">
     <div class="columns box" style="background-color:  #141414;">
         <!--Beginn von Netflix Logo-->
-        <div class="column third">
+        <div class="column full-half-third">
             <div class="center-pic">
-                <img id="netflix-logo" img src="./assets/640px-Netflix_2015_logo.svg.png"/>
+                <img id="netflix-logo" src="./assets/640px-Netflix_2015_logo.svg.png"/>
             </div>
         </div>
         <!--Ende von Netflix Logo Column-->
-        <div class="column">
+        <div class="column full-half-2third">
             <div id="flex-col" class="tabs is-centered is-boxed">
                 <ul>
                     <li class="netflixtab is-active" (click)="openTab($event,'netflix-cs','netflix-tab','netflixtab')"><a>Recently Released</a></li>
@@ -73,7 +73,7 @@
                                             </p>
                                             <p>Type: {{ls?.type}}</p>
                                             <p>Rating: <br>{{ls?.rating}}</p>
-                                            <p>Added: <br>{{ls?.unogsdate}}</p>
+                                            <p>Leaves: <br>{{ls?.unogsdate}}</p>
                                         </div>
                                     </div>                                
                                 </div>

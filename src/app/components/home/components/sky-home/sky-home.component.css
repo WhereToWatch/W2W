@@ -12,14 +12,21 @@
 ul{
     margin-block-start: 0;
 }
-
 #sky-logo{
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  width: 80%;
-  height: 60%;
-  max-width: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    width: 65%;
+    height: 60%;
+    max-width: 100%;
+}
+@media screen and (min-width: 1024px)
+{
+    #sky-logo{
+        width: 80%;
+        height: 60%;
+        max-width: 100%;
+    }   
 }
