@@ -111,7 +111,7 @@ img{
 @media screen and (max-width: 1024px)
 {
   /* This container is needed to position the front and back side */
-	.flip-card-inner {
+	.flip-card{
 		position: relative;
 		text-align: center;
 	}
@@ -168,8 +168,8 @@ img{
 
 	/* Style the front side (fallback if image is missing) */
 	.flip-card-front img {
-		height: 100%;
-		width: auto;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -177,7 +177,7 @@ img{
 @media screen and (min-width:1024px) and (max-width: 1439px) and (orientation: portrait)
 {
    /* This container is needed to position the front and back side */
-   .flip-card-inner {
+   .flip-card{
 		position: relative;
 		text-align: center;
 	}
@@ -234,8 +234,8 @@ img{
 
 	/* Style the front side (fallback if image is missing) */
 	.flip-card-front img {
-		height: 100%;
-		width: auto;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -262,7 +262,7 @@ img{
   }
 
   /* This container is needed to position the front and back side */
-  .flip-card-inner {
+  .flip-card{
       position: relative;
       width: 100%;
       height: 100%;
@@ -272,7 +272,7 @@ img{
   }
 
   /* Do an horizontal flip when you move the mouse over the flip box container */
-  .swiper-slide:hover .flip-card-inner {
+  .swiper-slide:hover .flip-card{
       transform: rotateY(180deg);
   }
   /* Position the front and back side */
@@ -287,6 +287,7 @@ img{
   /* Style the front side (fallback if image is missing) */
   .flip-card-front img {
       height: 100%;
+      width: 100%;
   }
 
   /* Style the back side */
@@ -320,7 +321,7 @@ img{
   }
 
   /* This container is needed to position the front and back side */
-  .flip-card-inner {
+  .flip-card{
       position: absolute;
       width: 100%;
       height: 100%;
@@ -330,7 +331,7 @@ img{
   }
 
   /* Do an horizontal flip when you move the mouse over the flip box container */
-  .swiper-slide:hover .flip-card-inner {
+  .swiper-slide:hover .flip-card{
       transform: rotateY(180deg);
   }
   /* Position the front and back side */
@@ -344,8 +345,8 @@ img{
 
   /* Style the front side (fallback if image is missing) */
   .flip-card-front img {
-      height: 100%;
-      width: auto;
+    height: 100%;
+    width: 100%;
   }
 
   /* Style the back side */

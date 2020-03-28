@@ -15,7 +15,7 @@
             <div class="field">
                 <label class="label">Name</label>
                 <input type="text" name="name" class="input" placeholder="Your Name" [(ngModel)]="name" required minlength="3" #nameInput="ngModel">
-                <div class="help is-error" *ngIf="nameInput.invalid && nameInput.touched">
+                <div class="help is-danger" *ngIf="nameInput.invalid && nameInput.touched">
                     Name is required and needs to be at least 3 characters long.
                 </div>
             </div>
@@ -23,7 +23,7 @@
             <div class="field">
                 <label class="label">E-mail</label>
                 <input type="email" name="email" class="input" placeholder="Your Email" [(ngModel)]="email" required email #emailInput="ngModel">
-                <div class="help is-error" *ngIf="emailInput.invalid && emailInput.touched">
+                <div class="help is-danger" *ngIf="emailInput.invalid && emailInput.touched">
                     Needs to be a valid email.
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <label class="label">Your Massage</label>
                 <textarea class="textarea" name="message" placeholder="What's on your mind?" [(ngModel)]="message" required #messageInput="ngModel">
                 </textarea>
-                <div class="help is-error" *ngIf="messageInput.invalid && messageInput.touched">
+                <div class="help is-danger" *ngIf="messageInput.invalid && messageInput.touched">
                     Your message is required!
                 </div>
             </div>

@@ -22,7 +22,7 @@
                         <div #SwiperWrapperCS class="home swiper-wrapper">
                             <ng-container *ngFor="let cs of dataValue.ITEMS">
                                 <div class="swiper-slide">
-                                    <div class="flip-card-inner">
+                                    <div class="flip-card">
                                         <div class="flip-card-front">
                                             <img class="border-picture" src="{{cs?.image}}" alt="{{cs?.title}}" style=" height: 100%; width: 100%;"/>
                                         </div>
@@ -58,7 +58,7 @@
                         <div #SwiperWrapperCS class="home swiper-wrapper">
                             <ng-container *ngFor="let ls of expire.ITEMS">
                                 <div class="swiper-slide">
-                                    <div class="flip-card-inner">
+                                    <div class="flip-card">
                                         <div class="flip-card-front">
                                             <img class="border-picture" src="{{ls?.image}}" alt="{{ls?.title}}" style=" height: 100%; width: 100%;"/>
                                         </div>

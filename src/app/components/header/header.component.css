@@ -127,6 +127,7 @@ input {
     margin-block-end: 0 ;
 }
 input[type=search] {
+	box-sizing: content-box;
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
 	font-family: inherit;
@@ -240,6 +241,7 @@ input::-webkit-input-placeholder {
 		margin-block-end: 0 ;
 	}
 	input[type=search] {
+		box-sizing: border-box;
 		-webkit-appearance: textfield;
 		-webkit-box-sizing: content-box;
 		font-family: inherit;

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Swiper, Navigation, Pagination, Scrollbar,Autoplay,Parallax,EffectFade } from 'swiper/js/swiper.esm.js';
+import Swiper from 'swiper';
 
+/*import { Swiper, Navigation, Pagination, Scrollbar,Autoplay,Parallax,EffectFade } from 'swiper/js/swiper.esm.js';
+*/
 @Component({
   selector: 'app-billboard',
   templateUrl: './billboard.component.html',
@@ -17,18 +19,14 @@ export class BillboardComponent implements OnInit {
   swiperMobile()
   {
     this.startSwiper = new Swiper('.billboard.swiper-container', {
-        speed: 600,
-        effect: 'fade',
-        grabCursor: true,
-        parallax: true,
-        loop:true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        speed: 600, //Die Geschwindigkeit mit der gewchselt wird 
+        effect: 'fade', //Beim Wechseln desd Bildes soll ein Effekt auftreten, der das Bild verschwinden lässt
+        grabCursor: true, //Bei Geräten mit einer Maus soll eine Hand zum Wechseln auftauchen
+        parallax: true, //Der Text bekommt auch einen Effekt
+        loop:true, //nach dem letzten Bild fängt er von neuem an
+        pagination: { //Zeigt die Anzahl der Bilder als Punkte an 
+            el: '.swiper-pagination', //die Klasse in der es angezeigt werden soll
+            clickable: true, //Erlaubt es durch das Drücken auf den Punkten das jewilige Bild auszuwählen und anzuzeigen 
         },
         autoplay:{
             delay: 5000,
@@ -86,7 +84,7 @@ export class BillboardComponent implements OnInit {
 
   swiperInit()
   {
-    Swiper.use([Navigation, Pagination, Scrollbar, Autoplay,Parallax,EffectFade]);
+    /*Swiper.use([Navigation, Pagination, Scrollbar, Autoplay,Parallax,EffectFade]);*/
     if(window.matchMedia("(max-width: 1027px)").matches)
     {   
         this.swiperMobile();

@@ -2,7 +2,7 @@ import { Component, ViewChild, Renderer2, OnInit, ElementRef, AfterViewInit, Hos
 import * as $ from 'jquery';
 import { fromEvent, Observable, Subscription } from "rxjs";
 import Swiper from 'swiper';
-import { Navigation, Pagination, Scrollbar,Autoplay,Parallax,EffectFade } from 'swiper/js/swiper.esm.js';
+/*import { Navigation, Pagination, Scrollbar,Autoplay,Parallax,EffectFade } from 'swiper/js/swiper.esm.js';*/
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -87,9 +87,8 @@ export class HomeComponent implements OnInit, AfterViewInit{
             });
     }
     swiperInit(){
-        Swiper.use([Navigation, Pagination, Scrollbar, Autoplay,Parallax,EffectFade]);
-
-        if (window.matchMedia("(max-width: 1023px)").matches)
+        /*Swiper.use([Navigation, Pagination, Scrollbar, Autoplay,Parallax,EffectFade]);*/
+        if (window.matchMedia("(max-width: 1023px)").matches) 
         {      
             this.mobileSwiper();
         }
