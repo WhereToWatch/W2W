@@ -28,9 +28,9 @@ export class BillboardComponent implements OnInit {
             el: '.swiper-pagination', //die Klasse in der es angezeigt werden soll
             clickable: true, //Erlaubt es durch das Drücken auf den Punkten das jewilige Bild auszuwählen und anzuzeigen 
         },
-        autoplay:{
-            delay: 5000,
-            disableOnInteraction: false,
+        autoplay:{ //Aktiviert das automatische Wechseln der Bilder 
+            delay: 5000, //Die Dauer in der das Bild angezeigt werden soll
+            disableOnInteraction: false, //Soll immmer aktiv sein, selbst wenn der Benutzer weiterklickt 
         }
     });
   }
@@ -39,8 +39,8 @@ export class BillboardComponent implements OnInit {
   {
     this.startSwiper = new Swiper('.billboard.swiper-container', {
         speed: 600,
-        autoHeight: true,
-        simulateTouch:false,
+        autoHeight: true, //Die Höhe soll sich automatisch anpassen
+        simulateTouch:false, //Erlaubt das Wechseln nur über die Knöpfe bzw. den Punkten 
         effect: 'fade',
         parallax: true,
         loop:true,
@@ -48,9 +48,9 @@ export class BillboardComponent implements OnInit {
             el: '.swiper-pagination',
             clickable: true,
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        navigation: { //Fügt eine Navigation durch Pfeile
+            nextEl: '.swiper-button-next', //Das Element das als Knopf zum vorspringen dient
+            prevEl: '.swiper-button-prev', //Das Element das als Knopf zum zurückgehen dient
         },
         autoplay:{
             delay: 5000,
@@ -107,9 +107,9 @@ export class BillboardComponent implements OnInit {
     }
   }
 
-  ngOnInit() 
+  ngOnInit() //Eine Funktion von Angular, die immer aufgerüfen wird wenn die Komponente aufgerufen wird
   {
-    this.swiperInit(); 
+    this.swiperInit(); //Aufruf der Funktion zum Aktivieren
     /*if(window.matchMedia("(max-width: 1599px)").matches)
     {
         var swipercontainer = Array.from(document.getElementsByClassName("billboard swiper-container") as HTMLCollectionOf<HTMLElement>);

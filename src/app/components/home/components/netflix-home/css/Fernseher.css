@@ -29,6 +29,7 @@
 	--swiper-navi-size: 20px;
 	--swiper-bullet-size: 20px;
 	}
+	/*Ändert die Pagination Bullets, sodass sie unter den Slides liegen*/
 	.swiper-pagination.down-slide{
 		position: relative;
 		bottom: 0;
