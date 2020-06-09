@@ -3,8 +3,8 @@ import { HttpClient, HttpHeaders, HttpParams, HttpResponse } from '@angular/comm
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 /*import { isPlatformBrowser } from '@angular/common';*/
 
-let headers = new HttpHeaders().set('x-rapidapi-host', 'unogs-unogs-v1.p.rapidapi.com');
-headers = headers.set('x-rapidapi-key', '2e75f12489msh4881df0eea4530ap1d9974jsnb1c9075c37c4');
+let headers = new HttpHeaders().set('x-rapidapi-host', '');
+headers = headers.set('x-rapidapi-key', '');
 headers.append('Content-Type', 'application/json');
 
 export class obj {
