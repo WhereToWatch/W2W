@@ -1,0 +1,44 @@
+<section class="hero is-primary is-bold">
+    <div class="hero-body">
+    <div class="container">
+
+      <h1 class="title">Contact Us!</h1>
+
+    </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+      <!-- form goes here -->
+        <form (ngSubmit)="processForm()" #contactForm="ngForm">
+            
+            <div class="field">
+                <label class="label">Name</label>
+                <input type="text" name="name" class="input" placeholder="Your Name" [(ngModel)]="name" required minlength="3" #nameInput="ngModel">
+                <div class="help is-danger" *ngIf="nameInput.invalid && nameInput.touched">
+                    Name is required and needs to be at least 3 characters long.
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">E-mail</label>
+                <input type="email" name="email" class="input" placeholder="Your Email" [(ngModel)]="email" required email #emailInput="ngModel">
+                <div class="help is-danger" *ngIf="emailInput.invalid && emailInput.touched">
+                    Needs to be a valid email.
+                </div>
+            </div>
+            
+            <div class="field">
+                <label class="label">Your Massage</label>
+                <textarea class="textarea" name="message" placeholder="What's on your mind?" [(ngModel)]="message" required #messageInput="ngModel">
+                </textarea>
+                <div class="help is-danger" *ngIf="messageInput.invalid && messageInput.touched">
+                    Your message is required!
+                </div>
+            </div>
+            
+            <button [disabled]="contactForm.invalid" type="submit" class="button is-danger is-large">Submit</button>
+          
+          </form>
+    </div>
+</section>

@@ -1,0 +1,190 @@
+@media screen and (max-width: 767px) and (orientation: portrait)
+{	
+	li.netflixtab a{
+		font-size: 12px;
+	} 
+	.swiper-slide{
+		width: 28%;
+	}
+	.swiper-wrapper{
+		height: auto;
+	}
+	
+	
+	/*Tabs*/
+	.tabs ul {
+		max-width: 100%;
+	}
+	.tabs li {
+		text-align: center;
+		padding: 0% 7%;
+		display: flex;
+		max-width: 50%;
+		justify-content: center;
+	}
+	.tabs.is-boxed a:hover {
+		background-color: transparent;
+		border-bottom-color: transparent;
+	}
+	.tabs.is-boxed li a {
+		border-radius: 0;
+		padding: 3%;
+		width: fit-content;
+		color: gray;
+		text-align: center;
+	}
+	.tabs.is-boxed li.is-active {
+		background-color: white;
+		border: 1px solid transparent;
+    	border-radius: 4px 4px 0 0;
+	}
+	.tabs.is-boxed li.is-active a {
+		/* background-color: white; */
+		padding: 0;
+		border-color: transparent;
+		border-bottom-color: transparent !important;
+	}
+    #flex-col{
+		margin-bottom: 1%;
+		overflow: hidden;
+	}
+
+	/*Services Swiper Buttons*/
+	#btprev-verti{
+		display: none;
+	}
+	#btnext-verti{
+		display: none;
+	}
+	
+	
+	/*Netflix*/
+    #netflix-index {
+		padding: 10% 5%;
+	}
+	#netflix-logo{
+		width: 100%; 
+	}
+	
+	
+	/*Prime*/
+	#prime-index {
+		padding: 10% 5%;
+	}
+	#prime-logo{
+		width: 100%; 
+	}
+	
+	
+	/*Disney*/
+	#disney-index {
+		padding: 10% 15%;
+	}
+	#disney-logo{
+		width: 100%; 
+	}
+
+	
+	/*Sky*/
+	#sky-index {
+		padding: 10% 15%;
+	}
+	#sky-logo{
+		width: 100%; 
+	}
+}
+
+
+@media screen and (max-width: 767px) and (orientation: landscape)
+{
+	.swiper-slide{
+		width: 28%;
+	}
+	.swiper-wrapper{
+		height: auto;
+	}
+
+	
+	/*Tabs*/
+	.tabs ul {
+		max-width: 100%;
+	}
+	.tabs li {
+		text-align: center;
+		padding: 0% 9%;
+		max-width: 50%;
+		display: flex;
+	}
+	.tabs.is-boxed a:hover {
+		background-color: transparent;
+		border-bottom-color: transparent;
+	}
+	.tabs.is-boxed li a {
+		border-radius: 0;
+		padding: 3%;
+		width: fit-content;
+		color: gray;
+	}
+	.tabs.is-boxed li.is-active {
+		background-color: white;
+		border: 1px solid transparent;
+    	border-radius: 4px 4px 0 0;
+	}
+	.tabs.is-boxed li.is-active a {
+		/* background-color: white; */
+		padding: 0;
+		border-color: transparent;
+		border-bottom-color: transparent !important;
+	}
+    #flex-col{
+		margin-bottom: 1%;
+	}
+
+	
+	/*Services Swiper Buttons*/
+	#btprev-verti{
+		display: none;
+	}
+	#btnext-verti{
+		display: none;
+	}
+	
+	
+	/*Netflix*/
+    #netflix-index {
+		padding: 10% 5%;
+	}
+	#netflix-logo{
+		width: 100%; 
+	}
+	
+	
+	/*Prime*/
+	#prime-index {
+		padding: 10% 5%;
+	}
+	#prime-logo{
+		width: 100%; 
+	}
+	
+	
+	/*Disney*/
+	#disney-index {
+		padding: 10% 15%;
+	}
+	#disney-logo{
+		width: 100%; 
+	}
+
+	
+	/*Sky*/
+	#sky-index {
+		padding: 10% 15%;
+	}
+	#sky-logo{
+		width: 100%; 
+	}
+}
+
+
+

@@ -1,0 +1,60 @@
+@media screen and (min-width: 768px) and (max-width: 1023px)
+{
+	.flip-card-back {
+		background-color: #0f171e;
+		color: white;
+	}
+	.swiper-wrapper{
+		height: auto;
+	}
+	.columns{
+		margin: 20px;
+		display: block !important;
+	}
+    #flex-col{
+		margin-bottom: 1%;
+		overflow: hidden;
+    }
+	.swiper-slide{
+		width: 31%;
+	}
+	#btprev-verti{
+		display: none;
+	}
+	#btnext-verti{
+		display: none;
+	}
+	/*Prime*/
+	.center-pic{
+		margin-top: 5%;
+		margin-bottom: 5%;
+	 }
+	 
+
+}
+
+@media screen and (min-width:1024px ) and (max-width: 1439px) and (orientation: portrait)
+{
+		/* Style the back side */
+		.flip-card-back {
+			background-color: #0f171e;
+			color: white;
+		}
+		.columns{
+			margin: 20px;
+		}
+		#flex-col{
+			margin-bottom: 1%;
+			padding: 0 1%;
+		}
+		.swiper-slide{
+			width: 31%;
+		}
+
+		#btprev-verti{
+			display: none;
+		}
+		#btnext-verti{
+			display: none;
+		}
+}
